@@ -1,4 +1,8 @@
+import Token5e from "../dependencies/dnd5e/module/canvas/token.mjs";
+
 Hooks.on("midi-qol.damageApplied", async (x) => {
+    x = new Token5e(x);
+    
     console.log("Hola Angeles!!");
     console.log()
     if (x.data.name !== "SemiEntidad (Baram)") return;
